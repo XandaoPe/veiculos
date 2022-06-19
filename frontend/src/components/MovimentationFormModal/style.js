@@ -20,7 +20,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   max-width: 400px;
-  max-height: 480px;
+  max-height: 600px;
   padding: 2em 3em;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
   border-radius: 20px;

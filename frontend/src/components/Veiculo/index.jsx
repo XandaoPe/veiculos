@@ -2,7 +2,10 @@ import React, { useContext } from "react";
 
 import { IoTrashBin, IoThumbsUp, IoPencil } from "react-icons/io5";
 import { EditingVeiculoContext } from "../../context/EditingVeiculoContext";
+
 import { FormModalContext } from "../../context/FormModalContext";
+import { MovimentationContext } from "../../context/MovimentationContext";
+
 import { useAxios } from "../../hooks/useAxios";
 
 import api from "../../services/api";
@@ -11,25 +14,14 @@ import { Container, ButtonArea, Button } from "./styles";
 
 export default function Veiculo({ id, marca, modelo, placa, ano }) {
   const { handleEditMode } = useContext(FormModalContext);
+  const { handleMovimentationEditMode } = useContext(MovimentationContext);
   const { setEditingVeiculo } = useContext(EditingVeiculoContext);
 
   const { data, mutate } = useAxios("veiculos");
 
-
-  // function handleMovimento() {
-  //   api.patch(`/veiculos/${id}`);
-
-  //   const updatedVeiculos = {
-  //     veiculos: data.veiculos?.map((veiculo) => {
-  //       if (veiculo._id === id) {
-  //         return { ...veiculo, marca, modelo, placa, ano };
-  //       }
-  //       return veiculo;
-  //     }),
-  //   };
-
-  //   mutate(updatedVeiculos, false);
-  // }
+  function handleMovimento() {
+    handleMovimentationEditMode(marca, modelo, placa, ano);
+  }
 
   function handleDelete() {
     api.delete(`/veiculos/${id}`);
@@ -54,7 +46,7 @@ export default function Veiculo({ id, marca, modelo, placa, ano }) {
         <p>{modelo}</p>
         <p>{ano}</p>
         <ButtonArea>
-          <Button onClick={""}>
+          <Button onClick={handleMovimento}>
             <IoThumbsUp />
           </Button>
           <Button onClick={handleEdit}>

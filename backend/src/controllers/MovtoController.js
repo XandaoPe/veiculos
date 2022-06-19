@@ -3,7 +3,6 @@ const { v4: uuid } = require("uuid");
 const Movto = require("../models/Movto");
 
 module.exports = {
-
   async index(req, res) {
     try {
       const movto = await Movto.find();
@@ -17,7 +16,9 @@ module.exports = {
     const { marca, modelo, placa, ano, datas, km, qtde, valor } = req.body;
 
     if (!km || !qtde || !valor) {
-      return res.status(400).json({ error: "Obrigatório quantidade, km e valor." });
+      return res
+        .status(400)
+        .json({ error: "Obrigatório quantidade, km e valor." });
     }
 
     const movto = new Movto({
@@ -27,15 +28,19 @@ module.exports = {
       placa,
       ano,
       datas,
-      km,
-      qtde,
-      valor,
+      km: +km,
+      qtde: +qtde,
+      valor: +valor,
     });
+
+    console.log(movto);
 
     try {
       await movto.save();
 
-      return res.status(201).json({ message: "Movimento inserido com sucesso!" });
+      return res
+        .status(201)
+        .json({ message: "Movimento inserido com sucesso!" });
     } catch (err) {
       res.status(400).json({ error: err.message });
     }
@@ -45,9 +50,7 @@ module.exports = {
     const { marca, modelo, placa, ano, datas, km, qtde, valor } = req.body;
 
     if (!km || !qtde || !valor) {
-      return res
-        .status(400)
-        .json({ error: "Informar quantidade, km e valor" });
+      return res.status(400).json({ error: "Informar quantidade, km e valor" });
     }
 
     if (marca) res.movto.marca = marca;
@@ -60,20 +63,23 @@ module.exports = {
     if (valor) res.movto.valor = valor;
 
     try {
-      await res.movto.save()
-      return res.status(200).json({ message: "Movimento Atualizado com Sucesso!" });
+      await res.movto.save();
+      return res
+        .status(200)
+        .json({ message: "Movimento Atualizado com Sucesso!" });
     } catch (err) {
-      res.status(500).json({ error: err.message })
+      res.status(500).json({ error: err.message });
     }
   },
 
   async delete(req, res) {
     try {
       await res.movto.remove();
-      return res.status(200).json({ message: "Movimento removido com Sucesso!" });
+      return res
+        .status(200)
+        .json({ message: "Movimento removido com Sucesso!" });
     } catch (err) {
       return res.status(500).json({ error: err.message });
     }
   },
-
 };
