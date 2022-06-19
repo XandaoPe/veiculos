@@ -1,4 +1,4 @@
-# Videoteca
+# Controle de média de consumo
 Aplicação de estudo desenvolvida para aprender tecnologias e fixar conceitos da web.
 
 ### Tecnologias utilizadas:
