@@ -18,7 +18,7 @@ Em Node.js, pude aprender a criar um **API Rest** utilizando conceitos básicos 
 * Criação de um CRUD em Node.js;
 * A separação de responsabilidades através de arquivos e funções de acordo com os padrões utilizados pela comunidade;
 * Roteamento com o **Express**;
-* Utilizar **Insomnia** para desenvolver o backend sem um frontend estruturado; 
+* Utilizar **Postman** para desenvolver o backend sem um frontend estruturado; 
 * **Métodos HTTP**
 * Liberação de uso do backend para o **CORS**.
 
@@ -32,20 +32,6 @@ Aqui obtive vários conhecimentos novos, como:
 * Um pouco mais sobre design responsivo e CSS.
 
 ### Sobre o app
-É um aplicativo para você salvar links de vídeos, onde pode colar o link de um vídeo, atribuí-lo um nome, dar like, editar e excluir. O código e a UI foi feita inteiramente em inglês, buscando melhorar meu conhecimento na linguagem.
+É um aplicativo para você salvar veículos, onde vc terá um controle de média por km rodado.
 
-**Homepage:**
 
-![Homepage](./images/homepage_novideo.png)
-
-**Homepage com notas:**
-
-![Homepage2](./images/homepage.png)
-
-**Modal para criar/editar nota**
-
-![Modal](./images/modal.png)
-
-**E sim, funciona em dispositivos móveis!**
-
-![Mobile](./images/mobile.png)
