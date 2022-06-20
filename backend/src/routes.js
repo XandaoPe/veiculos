@@ -10,14 +10,19 @@ routes.get("/veiculos", VeiculoController.index);
 
 routes.post("/veiculos", VeiculoController.store);
 
-routes.put("/veiculos/:id", VeiculoMiddleware.getVeiculo, VeiculoController.update);
-
-routes.delete("/veiculos/:id", VeiculoMiddleware.getVeiculo, VeiculoController.delete);
-
-routes.patch(
+routes.put(
   "/veiculos/:id",
-  VeiculoMiddleware.getVeiculo
+  VeiculoMiddleware.getVeiculo,
+  VeiculoController.update
 );
+
+routes.delete(
+  "/veiculos/:id",
+  VeiculoMiddleware.getVeiculo,
+  VeiculoController.delete
+);
+
+routes.patch("/veiculos/:id", VeiculoMiddleware.getVeiculo);
 
 routes.get("/movto", MovtoController.index);
 
@@ -27,9 +32,6 @@ routes.put("/movto/:id", MovtoMiddleware.getMovto, MovtoController.update);
 
 routes.delete("/movto/:id", MovtoMiddleware.getMovto, MovtoController.delete);
 
-routes.patch(
-  "/movto/:id",
-  MovtoMiddleware.getMovto
-);
+routes.patch("/movto/:id", MovtoMiddleware.getMovto);
 
 module.exports = routes;
