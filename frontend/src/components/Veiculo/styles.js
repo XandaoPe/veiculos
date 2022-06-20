@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   /* list-style: none; */
-  background: #ffffff;
+  /* background: #ffffff; */
+  background-color: #d68ff9;
   padding: 10px;
   height: 200px;
   width: 250px;
@@ -24,7 +25,8 @@ export const Container = styled.div`
     padding-left: 10px;
     max-width: 230px;
 
-    color: #999999;
+    /* color: #999999; */
+    color: #1e1e1e;    
     font-style: italic;
     align-self: start;
 

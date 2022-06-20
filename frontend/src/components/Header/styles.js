@@ -9,6 +9,7 @@ export const Container = styled.header`
   align-items: center;
 
   & > h1 {
-    color: #1e1e1e;
+    /* color: #1e1e1e; */
+    color: #dc83f7;
   }
 `;

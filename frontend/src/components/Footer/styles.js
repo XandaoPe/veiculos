@@ -8,7 +8,8 @@ export const Container = styled.footer`
   align-items: center;
 
   & > strong {
-    color: #1e1e1e;
+    /* color: #1e1e1e; */
+    color: #dc83f7;
     font-weight: 700;
     text-align: center;
   }

@@ -9,14 +9,15 @@ export const Overlay = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+  `;
 
 export const Container = styled.div`
-  background: #ffffff;
+  /* background: #ffffff; */
+  background-color: #7b5486;
   width: 100%;
   height: 100%;
   max-width: 400px;
@@ -102,7 +103,8 @@ export const Footer = styled.footer`
 
   & > button {
     align-self: center;
-    background: #b4ecb4;
+    /* background: #b4ecb4; */
+    background: #88d488;
     border: none;
     border-radius: 6px;
     width: 150px;
@@ -119,7 +121,8 @@ export const Footer = styled.footer`
 `;
 
 export const CheckIcon = styled(IoCheckmark)`
-  color: white;
+  /* color: white; */
+  color: #024402;
   width: 2.4em;
   height: 2.4em;
 `;

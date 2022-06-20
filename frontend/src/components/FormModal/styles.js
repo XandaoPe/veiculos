@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { IoClose, IoCheckmark } from "react-icons/io5";
 
 export const Overlay = styled.div`
-  background: rgba(242, 243, 245, 0.6);
+  /* background: rgba(242, 243, 245, 0.6); */
   position: fixed;
   top: 0;
   bottom: 0;
@@ -16,7 +16,8 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
-  background: #ffffff;
+  /* background: #ffffff; */
+  background: #7b5486;
   width: 100%;
   height: 100%;
   max-width: 400px;
@@ -87,7 +88,8 @@ export const InputGroup = styled.div`
   & > input {
     border: none;
     color: #1e1e1e;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+    background-color: #e2a3f3;
     border-radius: 5px;
 
     height: 30px;
@@ -102,7 +104,8 @@ export const Footer = styled.footer`
 
   & > button {
     align-self: center;
-    background: #b4ecb4;
+    /* background: #b4ecb4; */
+    background: #88d488;
     border: none;
     border-radius: 6px;
     width: 150px;
@@ -119,7 +122,8 @@ export const Footer = styled.footer`
 `;
 
 export const CheckIcon = styled(IoCheckmark)`
-  color: white;
+  /* color: white; */
+  color: #024402;
   width: 2.4em;
   height: 2.4em;
 `;

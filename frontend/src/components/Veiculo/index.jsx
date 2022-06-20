@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { IoTrashBin, IoThumbsUp, IoPencil } from "react-icons/io5";
+import { IoTrashBin, IoThumbsUp, IoPencil, IoClipboardSharp } from "react-icons/io5";
 import { EditingVeiculoContext } from "../../context/EditingVeiculoContext";
 
 import { FormModalContext } from "../../context/FormModalContext";
@@ -47,7 +47,7 @@ export default function Veiculo({ id, marca, modelo, placa, ano }) {
         <p>{ano}</p>
         <ButtonArea>
           <Button onClick={handleMovimento}>
-            <IoThumbsUp />
+            <IoClipboardSharp />
           </Button>
           <Button onClick={handleEdit}>
             <IoPencil />

@@ -5,7 +5,7 @@ import { Container } from "./styles";
 export default function Header() {
   return (
     <Container>
-      <h3>Veículos</h3>
+      <h1>Veículos</h1>
     </Container>
   );
 }
